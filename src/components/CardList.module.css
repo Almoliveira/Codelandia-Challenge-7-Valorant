@@ -1,0 +1,41 @@
+.flexContainer {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  left: 10vw;
+  bottom: 0;
+  height: 80vh;
+}
+
+.logoName {
+  color: black;
+  text-shadow: -0.1vw -0.1vw 0 #fff, 0.1vw -0.1vw 0 #fff, -0.1vw 0.1vw 0 #fff,
+    0.1vw 0.1vw 0 #fff;
+
+  font-size: 6vh;
+}
+
+.characterName {
+  text-align: center;
+  color: crimson;
+
+  font-family: "Open Sans";
+  font-size: 3vh;
+  font-weight: bold;
+
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .container{
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%) translateY(60%);
+  }
+}

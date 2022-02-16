@@ -1,0 +1,71 @@
+.cardContainer {
+    position: relative;
+    height: 250px;
+    width: 220px;
+    background: crimson;
+
+    top:50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    clip-path: polygon(8% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 7%);
+
+
+}
+
+.imageContainer {
+    position: absolute;
+    height: 250px;
+    bottom: 0;
+    left: 0;
+}
+
+.cardBackground {
+    background-color: white;
+    position: relative;
+    height: 260px;
+    width: 230px;
+
+    clip-path: polygon(8% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 7%);
+
+    margin: 0.3vw;
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 650px) {
+
+    .cardContainer {
+        height: 250px;
+        width: 180px;
+    }
+
+    .imageContainer {
+        height: 250px;
+        
+    }
+
+    .cardBackground{
+        width: 185px;
+        height: 260px;
+    }
+
+}
+
+@media screen and (max-width: 649px) {
+    .cardContainer {
+        height: 150px;
+        width: 100px;
+    }
+
+    .imageContainer {
+        height: 150px;
+        
+    }
+
+    .cardBackground{
+        width: 110px;
+        height: 160px;
+    }
+}

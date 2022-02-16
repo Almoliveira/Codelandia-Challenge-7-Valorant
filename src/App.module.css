@@ -1,0 +1,52 @@
+.App {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+
+.renderImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 80vh;
+  z-index: -1;
+}
+
+.cardContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80vh;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .renderImage{
+    bottom: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+    filter: grayscale();
+  }
+
+  .cardContainer{
+    position: relative;
+  }
+  
+}
+
+@media screen and (max-width: 649px) {
+
+  .renderImage{
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+    filter: grayscale();
+    height: 100vh;
+    width: 100vw;
+  }
+
+}

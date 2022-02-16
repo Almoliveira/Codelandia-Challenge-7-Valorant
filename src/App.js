@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.css";
+import CardList from "./components/CardList";
+
+import OmenRender from "./assets/svg/omen_render.png";
+import SageRender from "./assets/svg/sage_render.png";
+import SovaRender from "./assets/svg/sova_render.png";
+import PhoenixRender from "./assets/svg/phoenix_render.png";
+
+import { useState } from "react";
 
 function App() {
+  const charList = ["omen", "sage", "sova"];
+
+  const [svg, setSvg] = useState(PhoenixRender);
+
+  const RenderCallBack = (value) => {
+    switch (value) {
+      case "omen":
+        setSvg(OmenRender);
+        break;
+      case "sage":
+        setSvg(SageRender);
+        break;
+      case "sova":
+        setSvg(SovaRender);
+        break;
+      default:
+        setSvg(PhoenixRender);
+        break;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CardList lista={charList}  callFunction={RenderCallBack} />
+      <img src={svg} alt="render" className={styles.renderImage} />
     </div>
   );
 }

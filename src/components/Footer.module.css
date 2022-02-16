@@ -1,0 +1,10 @@
+.imgContainer {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.footerContainer {
+  justify-content: start;
+  gap: 12px;
+}
